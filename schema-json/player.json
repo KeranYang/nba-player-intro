@@ -1,0 +1,57 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a struct representing a player",
+    "title": "Player API",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "definitions": {
+    "Player": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "the player's name",
+          "type": "string",
+          "x-go-name": "Name"
+        },
+        "number": {
+          "description": "the player's number",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "Number"
+        },
+        "position": {
+          "description": "the player's position",
+          "type": "string",
+          "x-go-name": "Position"
+        },
+        "school": {
+          "$ref": "#/definitions/School"
+        },
+        "team": {
+          "description": "the player's team name",
+          "type": "string",
+          "x-go-name": "Team"
+        }
+      },
+      "x-go-package": "nba-player-go/player"
+    },
+    "School": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "description": "the school's city",
+          "type": "string",
+          "x-go-name": "City"
+        },
+        "name": {
+          "description": "the school's name",
+          "type": "string",
+          "x-go-name": "Name"
+        }
+      },
+      "x-go-package": "nba-player-go/player"
+    }
+  }
+}
