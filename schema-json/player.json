@@ -5,19 +5,24 @@
     "Player": {
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Player name"
         },
         "team": {
-          "type": "string"
+          "type": "string",
+          "description": "Player team"
         },
         "position": {
-          "type": "string"
+          "type": "string",
+          "description": "Player position"
         },
         "number": {
-          "type": "integer"
+          "type": "integer",
+          "description": "Player number"
         },
         "school": {
-          "$ref": "#/$defs/School"
+          "$ref": "#/$defs/School",
+          "description": "Player school"
         }
       },
       "additionalProperties": false,
@@ -33,10 +38,12 @@
     "School": {
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "School name"
         },
         "city": {
-          "type": "string"
+          "type": "string",
+          "description": "School city"
         }
       },
       "additionalProperties": false,

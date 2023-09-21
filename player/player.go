@@ -6,10 +6,10 @@ import "encoding/json"
 import "fmt"
 
 type School struct {
-	// City corresponds to the JSON schema field "city".
+	// School city
 	City string `json:"city" yaml:"city" mapstructure:"city"`
 
-	// Name corresponds to the JSON schema field "name".
+	// School name
 	Name string `json:"name" yaml:"name" mapstructure:"name"`
 }
 
@@ -35,19 +35,19 @@ func (j *School) UnmarshalJSON(b []byte) error {
 }
 
 type Player struct {
-	// Name corresponds to the JSON schema field "name".
+	// Player name
 	Name string `json:"name" yaml:"name" mapstructure:"name"`
 
-	// Number corresponds to the JSON schema field "number".
+	// Player number
 	Number int `json:"number" yaml:"number" mapstructure:"number"`
 
-	// Position corresponds to the JSON schema field "position".
+	// Player position
 	Position string `json:"position" yaml:"position" mapstructure:"position"`
 
-	// School corresponds to the JSON schema field "school".
+	// Player school
 	School School `json:"school" yaml:"school" mapstructure:"school"`
 
-	// Team corresponds to the JSON schema field "team".
+	// Player team
 	Team string `json:"team" yaml:"team" mapstructure:"team"`
 }
 
