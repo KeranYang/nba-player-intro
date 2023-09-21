@@ -1,57 +1,50 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "description": "This is a struct representing a player",
-    "title": "Player API",
-    "version": "1.0.0"
-  },
-  "paths": {},
-  "definitions": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$ref": "#/$defs/Player",
+  "$defs": {
     "Player": {
-      "type": "object",
       "properties": {
         "name": {
-          "description": "the player's name",
-          "type": "string",
-          "x-go-name": "Name"
-        },
-        "number": {
-          "description": "the player's number",
-          "type": "integer",
-          "format": "int32",
-          "x-go-name": "Number"
-        },
-        "position": {
-          "description": "the player's position",
-          "type": "string",
-          "x-go-name": "Position"
-        },
-        "school": {
-          "$ref": "#/definitions/School"
+          "type": "string"
         },
         "team": {
-          "description": "the player's team name",
-          "type": "string",
-          "x-go-name": "Team"
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer"
+        },
+        "school": {
+          "$ref": "#/$defs/School"
         }
       },
-      "x-go-package": "nba-player-go/player"
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "name",
+        "team",
+        "position",
+        "number",
+        "school"
+      ]
     },
     "School": {
-      "type": "object",
       "properties": {
-        "city": {
-          "description": "the school's city",
-          "type": "string",
-          "x-go-name": "City"
-        },
         "name": {
-          "description": "the school's name",
-          "type": "string",
-          "x-go-name": "Name"
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
         }
       },
-      "x-go-package": "nba-player-go/player"
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "name",
+        "city"
+      ]
     }
   }
 }

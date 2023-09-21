@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/KeranYang/nba-player-intro/player/models"
+	models "github.com/KeranYang/nba-player-intro/player"
 )
 
 func main() {
@@ -12,7 +12,7 @@ func main() {
 		Team:     "Chicago Bulls",
 		Position: "Shooting Guard",
 		Number:   23,
-		School: &models.School{
+		School: models.School{
 			Name: "University of North Carolina",
 			City: "Chapel Hill",
 		},
